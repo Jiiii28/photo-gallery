@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
       # 1. Get the source code
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -46,17 +47,17 @@ jobs:
         working-directory: photo-gallery
         run: npx cap sync android
 
-      # 7. Make Gradle executable
+      # 7. Make Gradle Executable
       - name: Make Gradle Executable
         working-directory: photo-gallery/android
         run: chmod +x gradlew
 
-      # 8. Check Gradle version
+      # 8. Check Gradle Version
       - name: Check Gradle Version
         working-directory: photo-gallery/android
         run: ./gradlew --version
 
-      # 9. Build Debug APK
+      # 9. Build Android APK
       - name: Build Android APK
         working-directory: photo-gallery/android
         run: ./gradlew assembleDebug
