@@ -12,7 +12,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
       # 1. Get the source code
       - name: Checkout Code
         uses: actions/checkout@v4
